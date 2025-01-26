@@ -19,14 +19,17 @@
 
             using (StreamReader inputReader = new StreamReader(inputFilePath))
             {
-                while (!inputReader.EndOfStream)
+                using (StreamWriter outputStream = new StreamWriter(outputFilePath))
                 {
-                    string line = inputReader.ReadLine();
-                    if (count % 2 == 0)
+                    while (!inputReader.EndOfStream)
                     {
-                        Console.WriteLine($"{line}");
+                        string line = inputReader.ReadLine();
+                        if (count % 2 == 0)
+                        {
+                            outputStream.WriteLine($"{line}");
+                        }
+                        count++;
                     }
-                    count++;
                 }
             }
         }

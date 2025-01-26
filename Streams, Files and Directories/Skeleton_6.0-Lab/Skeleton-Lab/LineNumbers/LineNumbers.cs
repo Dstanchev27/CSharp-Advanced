@@ -18,11 +18,14 @@
 
             using(StreamReader inputReader = new StreamReader(inputFilePath))
             {
-                while(!inputReader.EndOfStream)
+                using (StreamWriter outputWriter = new StreamWriter(outputFilePath))
                 {
-                    string line = inputReader.ReadLine();
+                    while (!inputReader.EndOfStream)
+                    {
+                        string line = inputReader.ReadLine();
 
-                    Console.WriteLine($"{++rownumber}. {line}");
+                        outputWriter.WriteLine($"{++rownumber}. {line}");
+                    }
                 }
             }
         }

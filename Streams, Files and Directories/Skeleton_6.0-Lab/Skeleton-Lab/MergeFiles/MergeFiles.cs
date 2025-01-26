@@ -15,6 +15,26 @@
 
         public static void MergeTextFiles(string firstInputFilePath, string secondInputFilePath, string outputFilePath)
         {
+            string[] firstFileLines = File.ReadAllLines(firstInputFilePath);
+            string[] secondFileLines = File.ReadAllLines(secondInputFilePath);
+
+            int maxLength = Math.Max(firstFileLines.Length, secondFileLines.Length);
+
+            using (StreamWriter writer = new StreamWriter(outputFilePath))
+            {
+                for (int i = 0; i < maxLength; i++)
+                {
+                    if (i < firstFileLines.Length)
+                    {
+                        writer.WriteLine(firstFileLines[i]);
+                    }
+
+                    if (i < secondFileLines.Length)
+                    {
+                        writer.WriteLine(secondFileLines[i]);
+                    }
+                }
+            }
         }
     }
 }
