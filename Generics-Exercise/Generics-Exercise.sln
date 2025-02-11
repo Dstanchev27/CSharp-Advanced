@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxofString", "BoxofString\BoxofString.csproj", "{CED32B8A-FF40-4AF6-B15F-5C96A394CA55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise1&2", "Exercise1&2", "{378EF10E-E828-4DD1-8F88-3C8630DCB015}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise3&4", "Exercise3&4", "{E0FCB0D7-A2E8-4F0D-A501-662631800D48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethod", "GenericSwapMethod\GenericSwapMethod.csproj", "{6F8B115B-1D59-4E69-9951-491161223411}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CED32B8A-FF40-4AF6-B15F-5C96A394CA55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED32B8A-FF40-4AF6-B15F-5C96A394CA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED32B8A-FF40-4AF6-B15F-5C96A394CA55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED32B8A-FF40-4AF6-B15F-5C96A394CA55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8B115B-1D59-4E69-9951-491161223411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8B115B-1D59-4E69-9951-491161223411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8B115B-1D59-4E69-9951-491161223411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8B115B-1D59-4E69-9951-491161223411}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CED32B8A-FF40-4AF6-B15F-5C96A394CA55} = {378EF10E-E828-4DD1-8F88-3C8630DCB015}
+		{6F8B115B-1D59-4E69-9951-491161223411} = {E0FCB0D7-A2E8-4F0D-A501-662631800D48}
+	EndGlobalSection
+EndGlobal

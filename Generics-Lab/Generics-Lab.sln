@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxOfT", "BoxOfT\BoxOfT.csproj", "{37732439-8AA2-4F86-84DD-5CF7C7260EFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exersice1", "Exersice1", "{2697E1E5-AEDD-485A-92E4-D7E094B8D8BA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise1", "Exercise1", "{2697E1E5-AEDD-485A-92E4-D7E094B8D8BA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exersice2", "Exersice2", "{FB4A7937-8415-47FC-9812-DB41070810CA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise2", "Exercise2", "{FB4A7937-8415-47FC-9812-DB41070810CA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exersice3", "Exersice3", "{ECC43478-DBD2-4C2D-B7FC-FB53FB49B6C4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise3", "Exercise3", "{ECC43478-DBD2-4C2D-B7FC-FB53FB49B6C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericArrayCreator", "GenericArrayCreator\GenericArrayCreator.csproj", "{93C4C08D-5C2E-422F-B094-DCC13F76608C}"
 EndProject
