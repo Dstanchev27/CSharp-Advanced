@@ -21,6 +21,7 @@
             this._title = title;
             this._year = year;
             this._authors = new List<string>(authors);
+
         }
 
         public int CompareTo(Book? other)
