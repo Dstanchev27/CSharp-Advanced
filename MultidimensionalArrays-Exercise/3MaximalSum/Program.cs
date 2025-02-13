@@ -4,51 +4,62 @@
     {
         static void Main(string[] args)
         {
-            var dimensions = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int rows = dimensions[0], cols = dimensions[1];
+            int[] dimensions = Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+            int rows = dimensions[0];
+            int cols = dimensions[1];
+
             int[,] matrix = new int[rows, cols];
 
-            for (int i = 0; i < rows; i++)
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                var rowValues = Console.ReadLine().Split().Select(int.Parse).ToArray();
-                for (int j = 0; j < cols; j++)
+                int[] elements = Console.ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToArray();
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    matrix[i, j] = rowValues[j];
+                    matrix[row, col] = elements[col];
                 }
             }
 
             int maxSum = int.MinValue;
-            int[,] bestSubMatrix = new int[3, 3];
-
-            for (int i = 0; i <= rows - 3; i++)
+            int maxRowIndex = -1;
+            int maxColIndex = -1;
+            for (int row = 0; row < matrix.GetLength(0) - 2; row++)
             {
-                for (int j = 0; j <= cols - 3; j++)
+                for (int col = 0; col < matrix.GetLength(1) - 2; col++)
                 {
-                    int currentSum = 0;
-                    int[,] currentSubMatrix = new int[3, 3];
-
-                    for (int subRow = 0; subRow < 3; subRow++)
-                    {
-                        for (int subCol = 0; subCol < 3; subCol++)
-                        {
-                            currentSubMatrix[subRow, subCol] = matrix[i + subRow, j + subCol];
-                            currentSum += currentSubMatrix[subRow, subCol];
-                        }
-                    }
-
+                    int currentSum = matrix[row, col] + matrix[row, col + 1] + matrix[row, col + 2]
+                                   + matrix[row + 1, col] + matrix[row + 1, col + 1] + matrix[row + 1, col + 2]
+                                   + matrix[row + 2, col] + matrix[row + 2, col + 1] + matrix[row + 2, col + 2];
                     if (currentSum > maxSum)
                     {
                         maxSum = currentSum;
-                        bestSubMatrix = currentSubMatrix;
+                        maxRowIndex = row;
+                        maxColIndex = col;
                     }
                 }
             }
 
             Console.WriteLine($"Sum = {maxSum}");
-            for (int i = 0; i < 3; i++)
+            for (int row = maxRowIndex; row < maxRowIndex + 3; row++)
             {
-                Console.WriteLine(string.Join(" ", Enumerable.Range(0, 3).Select(j => bestSubMatrix[i, j])));
+                for (int col = maxColIndex; col < maxColIndex + 3; col++)
+                {
+                    if (col > maxColIndex)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    Console.Write(matrix[row, col]);
+                }
+
+                Console.WriteLine();
             }
+
         }
     }
 }

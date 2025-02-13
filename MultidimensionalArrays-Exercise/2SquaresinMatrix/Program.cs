@@ -4,9 +4,14 @@
     {
         static void Main(string[] args)
         {
-            var dimensions = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var dimensions = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             int rows = dimensions[0];
             int cols = dimensions[1];
+
+            if (rows == 0 || cols == 0)
+            {
+                return;
+            }
 
             char[,] matrix = ReadMatrix(rows, cols);
             int squareCount = CountEqualSquares(matrix);
@@ -20,7 +25,7 @@
 
             for (int row = 0; row < rows; row++)
             {
-                char[] rowData = Console.ReadLine().Split().Select(char.Parse).ToArray();
+                char[] rowData = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
                 for (int col = 0; col < cols; col++)
                 {
                     matrix[row, col] = rowData[col];
